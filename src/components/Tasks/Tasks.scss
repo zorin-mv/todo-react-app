@@ -1,0 +1,132 @@
+.tasks {
+    margin-bottom: 20px;
+    flex: 1 1 50%;
+    padding: 20px;
+    min-width: 280px;
+    
+    &__title {
+        display: flex;
+        border-bottom: 1px solid #666;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        input {
+            width: 90%;
+            padding: 0 10px;
+            border: none;
+            font-size: 32px;
+            color: #666;
+        }
+
+        &:hover {
+            svg {
+                opacity: 0.2;
+            }
+        }
+
+        i {
+            margin-left: 20px;
+            display: inline-flex;
+    
+            svg {
+                opacity: 0;
+    
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__items {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+    }
+
+
+    [type="checkbox"] {
+        display: none;
+
+        &+span {
+            font-size: 14px;
+            position: relative;
+            cursor: pointer;
+            margin-right: 15px;
+            padding: 0 10px;
+
+            &:focus {
+                &::before {
+                    border-color: #0f0;
+                }
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                vertical-align: top;
+                border: 2px solid #e8e8e8;
+                margin-right: 10px;
+
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+
+            svg {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &:checked+span::before {
+            background-color: #4DD599;
+            border-color: #4DD599;
+        }
+    }
+}
+
+.task {
+    position: relative;
+    padding: 15px;
+
+    &:hover {
+        ._remove-task {
+            display: block;
+        }
+    }
+
+    ._remove-task {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:hover {
+            svg {
+                path {
+                    opacity: 1;
+                }
+            }
+        }
+
+        svg {
+            path {
+                opacity: 0.2;
+            }
+        }
+    }
+
+}

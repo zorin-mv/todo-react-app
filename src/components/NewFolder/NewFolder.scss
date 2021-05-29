@@ -1,0 +1,22 @@
+.todo__add-folder {
+
+    .todo__colors {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    ._badge {
+        width: 15px;
+        height: 15px;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        margin-bottom: 10px;
+
+        &._active-color {
+            border: 2px solid #000;
+            transform: scale(1.2);
+        }
+    }
+}

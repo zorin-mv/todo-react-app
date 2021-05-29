@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
